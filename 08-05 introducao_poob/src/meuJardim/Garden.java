@@ -17,7 +17,7 @@ public class Garden {
     }
     public void printGarden(){
         System.out.println(name);
-        flower1.printFlower();
-        flower2.printFlower();
+        flower1.printFlowerVector();
+        flower2.printFlowerVector();
     }
 }
