@@ -1,6 +1,6 @@
 package meuJardim;
 
-public class petal {
+public class Petal {
     private String color="";
 
     public void setColor(String color){
