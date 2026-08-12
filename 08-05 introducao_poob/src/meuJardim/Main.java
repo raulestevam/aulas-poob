@@ -17,13 +17,13 @@ public class Main{
         //petal02 = petal01; //petal02 pegou o endereço de memoria de petal01, apontam para o msm lugar
 
 //        Flower pink = new Flower(petal01, petal02);
-        Flower pink = new Flower();
+        Flower pink = new Flower(petal01, petal02);
         pink.setName("pink");
         pink.addPetal(petal01);
         pink.addPetal(petal02);
 
 //      Flower blossom = new Flower(petal03, petal04);
-        Flower blossom = new Flower();
+        Flower blossom = new Flower(petal03, petal04);
         blossom.setName("Blossom");
         blossom.addPetal(petal03);
         blossom.addPetal(petal04);
