@@ -34,7 +34,7 @@ public class Carro {
         return cor;
     }
     public void setPreco(Float preco){
-        this.preco = preco;;
+        this.preco = preco;
     }
     public Float getPreco(){
         return preco;
