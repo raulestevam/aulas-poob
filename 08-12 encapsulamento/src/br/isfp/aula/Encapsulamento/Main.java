@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Nome: "+name+
                 "\nValor:"+value+
                 "\nValor Double:"+value1+
-                "\nValor Byte:"+value2+);
+                "\nValor Byte:"+value2);
         leitor.close();
         //fecha o leitor
     }
