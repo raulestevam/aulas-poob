@@ -11,9 +11,14 @@ public class ExemploBotao {
             @Override
                 public void actionPerformed(ActionEvent e) {
                     System.out.println("Teste");
+                    JOptionPane.showMessageDialog(window, "Clicked");
                 }
             }
         );
+
+        //lambda function
+        button.addActionListener(
+                e->JOptionPane.showMessageDialog(window, "Clicked Again"));
 
         window.add(button);
         window.setSize(300, 200);
