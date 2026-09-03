@@ -1,3 +1,5 @@
+package br.ifsp.DynamicStatic;
+
 public class StaticClass {
     public static int valor = 0;
 

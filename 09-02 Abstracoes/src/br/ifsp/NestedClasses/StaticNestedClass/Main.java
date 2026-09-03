@@ -1,4 +1,4 @@
-package br.StaticNestedClass;
+package br.ifsp.NestedClasses.StaticNestedClass;
 
 public class Main {
 

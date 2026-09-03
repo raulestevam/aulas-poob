@@ -1,4 +1,4 @@
-package br.AnonimousNestedClass;
+package br.ifsp.NestedClasses.AnonimousNestedClass;
 
 public abstract class Engine {
     abstract void start();

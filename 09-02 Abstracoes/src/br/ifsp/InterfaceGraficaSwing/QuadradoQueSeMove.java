@@ -1,4 +1,4 @@
-package br.ifsp.ExemploSwing;
+package br.ifsp.InterfaceGraficaSwing;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

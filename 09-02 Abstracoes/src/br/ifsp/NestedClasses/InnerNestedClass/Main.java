@@ -1,6 +1,6 @@
-package br.InnerNestedClass;
+package br.ifsp.NestedClasses.InnerNestedClass;
 
-import br.InnerNestedClass.OuterClass.EmbedClass;
+import br.ifsp.NestedClasses.InnerNestedClass.OuterClass.EmbedClass;
 
 public class Main {
     public static void main (String[] args){
