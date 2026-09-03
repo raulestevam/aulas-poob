@@ -4,10 +4,10 @@ public class OuterClass {
     static int valorEstatico=20;
     int valorPrimitivo=30;
 
-    static class InnerClassAninhada{
+    static class NestedInnerClass{
         void display(){
             System.out.println(valorEstatico);
-            System.out.println(valorPrmitivo);
+            //System.out.println(valorPrmitivo);
         }
     }
 }
