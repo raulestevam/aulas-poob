@@ -1,6 +1,6 @@
 package br.ifsp.AbstractExemplo;
 
-public class Circulo {
+public class Circulo extends Formas{
     private int raio;
     private int x,y;
 
