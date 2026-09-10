@@ -3,6 +3,8 @@ package br.DatabaseMemory.BusinessLogicLayer;
 import br.DatabaseMemory.DataAcessObjectCliente.DaoCliente;
 import br.DatabaseMemory.Model.Cliente;
 
+import java.util.List;
+
 public class CadCliente {
     DaoCliente daoCliente;
 
@@ -28,4 +30,10 @@ public class CadCliente {
         daoCliente = new DaoCliente();
         daoCliente.Update(cliente);
     }
+
+    public List<Cliente> ListarClientes(){
+        daoCliente = new DaoCliente();
+        return daoCliente.listar();
+    }
+
 }

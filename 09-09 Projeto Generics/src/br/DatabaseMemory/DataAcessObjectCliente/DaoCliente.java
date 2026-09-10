@@ -21,11 +21,24 @@ public class DaoCliente {
         clienteBusca.setNome(cliente.getNome());
         clienteBusca.setEndereco(cliente.getEndereco());
     }
-
     public Cliente Read(int id){
         for(Cliente c:tabelaCliente){
             if(c.getId()==id) return c;
         }
         return null;
+    }
+
+//    public String listar(){
+//        String relatorio="";
+//        for(Cliente c:tabelaCliente){
+//            relatorio+=c.getId()+"\n"+
+//                    c.getNome()+"\n"+
+//                    c.getEndereco();
+//        }
+//        return relatorio;
+//    }
+
+    public List<Cliente> listar(){
+        return tabelaCliente;
     }
 }
