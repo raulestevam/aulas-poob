@@ -1,4 +1,4 @@
 package br.ifsp.InterfaceExemplo;
 
-public class Formas {
+public abstract class Formas {
 }

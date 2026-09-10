@@ -7,7 +7,7 @@ public class OuterClass {
     static class NestedInnerClass{
         void display(){
             System.out.println(valorEstatico);
-            //System.out.println(valorPrmitivo);
+            //System.out.println(valorPrmitivo);//ERRO
         }
     }
 }
