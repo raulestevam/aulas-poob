@@ -1,6 +1,6 @@
-package br.DatabaseMemory.DataAcessObjectCliente;
+package br.DAO;
 
-import br.DatabaseMemory.Model.Cliente;
+import br.Model.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,16 +27,6 @@ public class DaoCliente {
         }
         return null;
     }
-
-//    public String listar(){
-//        String relatorio="";
-//        for(Cliente c:tabelaCliente){
-//            relatorio+=c.getId()+"\n"+
-//                    c.getNome()+"\n"+
-//                    c.getEndereco();
-//        }
-//        return relatorio;
-//    }
 
     public List<Cliente> listar(){
         return tabelaCliente;

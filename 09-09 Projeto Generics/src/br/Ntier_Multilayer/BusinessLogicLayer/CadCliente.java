@@ -1,7 +1,7 @@
-package br.DatabaseMemory.BusinessLogicLayer;
+package br.Ntier_Multilayer.BusinessLogicLayer;
 
-import br.DatabaseMemory.DataAcessObjectCliente.DaoCliente;
-import br.DatabaseMemory.Model.Cliente;
+import br.Ntier_Multilayer.DataAcessObjectCliente.DaoCliente;
+import br.Ntier_Multilayer.Model.Cliente;
 
 import java.util.List;
 

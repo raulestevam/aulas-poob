@@ -1,6 +1,6 @@
-package br.DatabaseMemory.UI;
+package br.Ntier_Multilayer.UI;
 
-import br.DatabaseMemory.Model.Cliente;
+import br.Ntier_Multilayer.Model.Cliente;
 
 import java.util.List;
 import java.util.Scanner;

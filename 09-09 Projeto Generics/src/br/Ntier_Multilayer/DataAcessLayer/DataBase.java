@@ -1,6 +1,6 @@
-package br.DatabaseMemory.DataAcessLayer;
+package br.Ntier_Multilayer.DataAcessLayer;
 
-import br.DatabaseMemory.Model.Cliente;
+import br.Ntier_Multilayer.Model.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;

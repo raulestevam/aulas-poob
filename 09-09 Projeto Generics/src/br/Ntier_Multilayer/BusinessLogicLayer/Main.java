@@ -1,7 +1,7 @@
-package br.DatabaseMemory.BusinessLogicLayer;
+package br.Ntier_Multilayer.BusinessLogicLayer;
 
-import br.DatabaseMemory.Model.Cliente;
-import br.DatabaseMemory.UI.UICadCliente;
+import br.Ntier_Multilayer.Model.Cliente;
+import br.Ntier_Multilayer.UI.UICadCliente;
 
 import java.util.Scanner;
 

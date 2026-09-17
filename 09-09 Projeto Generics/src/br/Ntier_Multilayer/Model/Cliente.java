@@ -1,4 +1,4 @@
-package br.DatabaseMemory.Model;
+package br.Ntier_Multilayer.Model;
 
 public class Cliente {
     private int id;
