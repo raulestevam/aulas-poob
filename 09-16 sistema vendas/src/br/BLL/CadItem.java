@@ -8,46 +8,37 @@ import br.Model.Venda;
 import java.util.List;
 
 public class CadItem {
-    private DaoItem daoItem = new DaoItem();
+    private final DaoItem daoItem = new DaoItem();
 
-    // Adiciona um produto à venda. Se o produto já estiver na venda,
-    // soma a quantidade em vez de criar um item duplicado.
     public Item adicionarProduto(Venda venda, Produto produto, int quantidade) {
-        if (venda == null) {
-            throw new IllegalArgumentException("Venda não pode ser nula.");
-        }
-        if (produto == null) {
-            throw new IllegalArgumentException("Produto não pode ser nulo.");
-        }
-        if (quantidade <= 0) {
-            throw new IllegalArgumentException("Quantidade deve ser maior que zero.");
-        }
+        if (venda == null || produto == null) throw new IllegalArgumentException("Venda e produto são obrigatórios.");
+        if (quantidade <= 0) throw new IllegalArgumentException("Quantidade deve ser maior que zero.");
 
         for (Item item : venda.getTabelaItens()) {
             if (item.getProduto().getId() == produto.getId()) {
                 item.setQuantidade(item.getQuantidade() + quantidade);
-                daoItem.Update(item);
+                if (daoItem.Read(item.getId()) == null) daoItem.Create(item);
+                else daoItem.Update(item);
                 return item;
             }
         }
 
-        Item novoItem = new Item(gerarProximoId(), produto, quantidade);
-        venda.getTabelaItens().add(novoItem);
-        daoItem.Create(novoItem);
-        return novoItem;
+        Item novo = new Item(gerarProximoId(), produto, quantidade);
+        venda.getTabelaItens().add(novo);
+        daoItem.Create(novo);
+        return novo;
     }
 
     public void removerProduto(Venda venda, int idItem) {
+        if (venda == null) throw new IllegalArgumentException("Venda não pode ser nula.");
         Item item = buscar(idItem);
-        venda.getTabelaItens().remove(item);
+        venda.getTabelaItens().removeIf(i -> i.getId() == idItem);
         daoItem.Delete(item);
     }
 
     public Item buscar(int id) {
         Item item = daoItem.Read(id);
-        if (item == null) {
-            throw new IllegalArgumentException("Item com id " + id + " não encontrado.");
-        }
+        if (item == null) throw new IllegalArgumentException("Item com id " + id + " não encontrado.");
         return item;
     }
 
@@ -55,21 +46,14 @@ public class CadItem {
         return daoItem.listar();
     }
 
-    public float calcularTotal(Venda venda) {
-        float total = 0f;
-        for (Item item : venda.getTabelaItens()) {
-            total += item.getSubtotal();
-        }
-        return total;
+    public double calcularTotal(Venda venda) {
+        if (venda == null) throw new IllegalArgumentException("Venda não pode ser nula.");
+        return venda.getTotal();
     }
 
     private int gerarProximoId() {
         int maiorId = 0;
-        for (Item i : daoItem.listar()) {
-            if (i.getId() > maiorId) {
-                maiorId = i.getId();
-            }
-        }
+        for (Item item : daoItem.listar()) maiorId = Math.max(maiorId, item.getId());
         return maiorId + 1;
     }
 }

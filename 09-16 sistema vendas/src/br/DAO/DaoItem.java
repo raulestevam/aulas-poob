@@ -1,43 +1,43 @@
 package br.DAO;
 
-import br.Model.Produto;
+import br.Model.Item;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DaoItem {
-    private Produto produto;
-    private Number qtd;
-    private List<DaoItem> itens = new ArrayList<DaoItem>();
+    private static final List<Item> tabelaItem = new ArrayList<>();
 
-    public DaoItem(Produto produto, Number qtd) {
-        this.produto = produto;
-        this.qtd = qtd;
+    public void Create(Item item) {
+        if (item == null) {
+            throw new IllegalArgumentException("Item não pode ser nulo.");
+        }
+        tabelaItem.add(item);
     }
 
-    public Produto getProduto() {
-        return produto;
+    public void Delete(Item item) {
+        tabelaItem.remove(item);
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void Update(Item item) {
+        Item itemBusca = Read(item.getId());
+        if (itemBusca == null) {
+            throw new IllegalArgumentException("Item não encontrado.");
+        }
+        itemBusca.setProduto(item.getProduto());
+        itemBusca.setQuantidade(item.getQuantidade());
     }
 
-    public Number getQtd() {
-        return qtd;
-    }
-
-    public void setQtd(Number qtd) {
-        this.qtd = qtd;
-    }
-
-    public void addItens(Produto produto){
-        itens.forEach(item -> {
-            if(item.produto.getId() == produto.getId()){
-                item.setQtd(item.getQtd()+1);
-                return;
+    public Item Read(int id) {
+        for (Item item : tabelaItem) {
+            if (item.getId() == id) {
+                return item;
             }
-        });
-        itens.add();
+        }
+        return null;
+    }
+
+    public List<Item> listar() {
+        return new ArrayList<>(tabelaItem);
     }
 }

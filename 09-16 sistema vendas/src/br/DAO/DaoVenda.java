@@ -1,42 +1,43 @@
 package br.DAO;
 
-import br.Model.Cliente;
-import br.Model.Produto;
 import br.Model.Venda;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DaoVenda {
-    int qtd;
-    List<Venda> tabelaVenda = new ArrayList();
-    Cliente cliente = new Cliente();
-    Produto produto = new Produto();
-    DaoItem item = new DaoItem(produto, qtd);
+    private static final List<Venda> tabelaVenda = new ArrayList<>();
 
-    //CRUD
-    public void Create(Venda v, Cliente c, DaoItem i){
-        v.setCliente(c);
-        v.setTabelaItens(i);
-        tabelaVenda.add(v);
+    public void Create(Venda venda) {
+        if (venda == null) {
+            throw new IllegalArgumentException("Venda não pode ser nula.");
+        }
+        tabelaVenda.add(venda);
     }
-    public void Delete(Venda venda){
+
+    public void Delete(Venda venda) {
         tabelaVenda.remove(venda);
     }
-    public void Update(Venda venda){
+
+    public void Update(Venda venda) {
         Venda vendaBusca = Read(venda.getId());
-        vendaBusca.setId(Venda.getId());
-        vendaBusca.setNome(Venda.getNome());
-        vendaBusca.setPreco(Venda.getPreco());
+        if (vendaBusca == null) {
+            throw new IllegalArgumentException("Venda não encontrada.");
+        }
+        vendaBusca.setCliente(venda.getCliente());
+        vendaBusca.setTabelaItens(venda.getTabelaItens());
     }
-    public Venda Read(int id){
-        for(Venda c:tabelaVenda){
-            if(c.getId()==id) return c;
+
+    public Venda Read(int id) {
+        for (Venda venda : tabelaVenda) {
+            if (venda.getId() == id) {
+                return venda;
+            }
         }
         return null;
     }
 
-    public List<Venda> listar(){
-        return tabelaVenda;
+    public List<Venda> listar() {
+        return new ArrayList<>(tabelaVenda);
     }
 }
