@@ -3,7 +3,7 @@ package br.Model;
 public class Produto {
     private int id_produto;
     String nome;
-    float preco;
+    double preco;
 
     public int getId() {
         return id_produto;
@@ -21,11 +21,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 }
