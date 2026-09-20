@@ -6,29 +6,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DaoProduto {
-    List<Produto> tabelaProduto = new ArrayList();
+    private static final List<Produto> tabelaProduto = new ArrayList<>();
 
-    //CRUD
-    public void Create(Produto Produto){
-        tabelaProduto.add(Produto);
+    public void Create(Produto produto) {
+        if (produto == null) {
+            throw new IllegalArgumentException("Produto não pode ser nulo.");
+        }
+        tabelaProduto.add(produto);
     }
-    public void Delete(Produto Produto){
-        tabelaProduto.remove(Produto);
+
+    public void Delete(Produto produto) {
+        tabelaProduto.remove(produto);
     }
-    public void Update(Produto Produto){
-        Produto ProdutoBusca = Read(Produto.getId());
-        ProdutoBusca.setId(Produto.getId());
-        ProdutoBusca.setNome(Produto.getNome());
-        ProdutoBusca.setPreco(Produto.getPreco());
+
+    public void Update(Produto produto) {
+        Produto produtoBusca = Read(produto.getId());
+        if (produtoBusca == null) {
+            throw new IllegalArgumentException("Produto não encontrado.");
+        }
+        produtoBusca.setNome(produto.getNome());
+        produtoBusca.setPreco(produto.getPreco());
     }
-    public Produto Read(int id){
-        for(Produto c:tabelaProduto){
-            if(c.getId()==id) return c;
+
+    public Produto Read(int id) {
+        for (Produto produto : tabelaProduto) {
+            if (produto.getId() == id) {
+                return produto;
+            }
         }
         return null;
     }
 
-    public List<Produto> listar(){
-        return tabelaProduto;
+    public List<Produto> listar() {
+        return new ArrayList<>(tabelaProduto);
     }
 }
