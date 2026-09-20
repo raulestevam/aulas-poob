@@ -1,16 +1,22 @@
 package br.Model;
 
 public class Cliente {
-    private int id_cliente;
-    String endereco;
-    String nome;
+    private int id;
+    private String nome;
+    private String endereco;
 
-    public int getId() {
-        return id_cliente;
+    public Cliente(int id, String nome, String endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.endereco = endereco;
     }
 
-    public void setId(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -28,5 +34,4 @@ public class Cliente {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
 }
