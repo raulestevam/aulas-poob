@@ -8,7 +8,7 @@ import br.Model.Venda;
 import java.util.List;
 
 public class CadItem {
-    private final DaoItem daoItem = new DaoItem();
+    private DaoItem daoItem = new DaoItem();
 
     public Item adicionarProduto(Venda venda, Produto produto, int quantidade) {
         if (venda == null || produto == null) throw new IllegalArgumentException("Venda e produto são obrigatórios.");

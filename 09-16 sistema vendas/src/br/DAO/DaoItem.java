@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DaoItem {
-    private static final List<Item> tabelaItem = new ArrayList<>();
+    private static List<Item> tabelaItem = new ArrayList<>();
 
     public void Create(Item item) {
         if (item == null) {
