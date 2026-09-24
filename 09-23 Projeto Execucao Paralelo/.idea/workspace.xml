@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a73c0f6e-b421-43df-ae46-02bb22915547" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/Trabalhador.java" afterDir="false" />
+    <list default="true" id="a73c0f6e-b421-43df-ae46-02bb22915547" name="Changes" comment="trabalhando com threads e linhas de excecução">
+      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/BloqueioPorObjetoTrava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/ProcessadorFrutaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/ProcessadorFrutas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ThreadSimples/Trabalhador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ThreadSimples/Trabalhador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +49,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.ProcessadorFrutaMain.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -78,5 +82,13 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="trabalhando com threads e linhas de excecução" />
+    <option name="LAST_COMMIT_MESSAGE" value="trabalhando com threads e linhas de excecução" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

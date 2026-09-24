@@ -9,6 +9,14 @@ public class Trabalhador extends Thread{
         this.valor = valor;
     }
 
+    public synchronized int getValor(){
+        return valor;
+    }
+
+    public synchronized void incrementar(){
+        valor++;
+    }
+
     @Override
     public void run(){
         while (valor<10){
@@ -18,7 +26,8 @@ public class Trabalhador extends Thread{
                 throw new RuntimeException(e);
             }
             System.out.println(""+nome+"-> valor ->: "+valor);
-            valor++;
+//            valor++;
+
         }
     }
 }
