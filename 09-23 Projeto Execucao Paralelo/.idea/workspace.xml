@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a73c0f6e-b421-43df-ae46-02bb22915547" name="Changes" comment="trabalhando com threads e linhas de excecução">
-      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/BloqueioPorObjetoTrava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/ProcessadorFrutaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ThreadSimples/ProcessadorFrutas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ThreadSimples/Trabalhador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ThreadSimples/Trabalhador.java" afterDir="false" />
-    </list>
+    <list default="true" id="a73c0f6e-b421-43df-ae46-02bb22915547" name="Changes" comment="Execução de threads e bloqueio por objeto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +56,11 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="br.ThreadSimples" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,7 +84,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trabalhando com threads e linhas de excecução" />
-    <option name="LAST_COMMIT_MESSAGE" value="trabalhando com threads e linhas de excecução" />
+    <MESSAGE value="Execução de threads e bloqueio por objeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Execução de threads e bloqueio por objeto" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
