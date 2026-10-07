@@ -13,15 +13,16 @@ public class MDIComponentes extends JInternalFrame {
         setLayout(new BorderLayout());
 
         JPanel painel = new JPanel();
-        painel.addMouseListener(new MouseAdapter() {
+        MouseAdapter ma = new MouseAdapter() {
             public void mouseClicked(MouseEvent evt){
                 System.out.println("Mouse Clicado");
             }
             public void MouseMoved(MouseEvent evt){
                 System.out.println("X: "+evt.getX()+"Y: "+evt.getY());
             }
-        });
+        };
+        painel.addMouseListener(ma);
+        painel.addMouseMotionListener(ma);
         add(painel, BorderLayout.CENTER);
-
     }
 }
