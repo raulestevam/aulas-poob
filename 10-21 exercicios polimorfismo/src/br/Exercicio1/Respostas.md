@@ -1,1 +1,1 @@
-O arquivo no qual foi recebido a classe foi o
+O arquivo no qual foi recebido a classe foi a classe Animal a partir do método abstrato talk()

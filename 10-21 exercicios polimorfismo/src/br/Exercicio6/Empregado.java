@@ -36,4 +36,14 @@ public class Empregado implements Pagamento{
     public double getSalario() {
         return (this.salario);
     }
+    // retorno string do objeto fatura
+    public String toString() {
+        return ("Número Matricula: " + this.getFirstName() + this.getLastName() + this.getMatricula() + this.getSalario());
+    }
+    /** * metodo requerido para executar o metodo da interface Pagamento   */
+    public double getTotalPagamento() {
+        return getSalario() * 10.0;
+        //calcula preco total
+    }
 }
+
