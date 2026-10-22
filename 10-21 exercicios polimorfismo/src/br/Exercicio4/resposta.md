@@ -1,0 +1,1 @@
+Porque quando o objeto é instanciado na class main ele passa a alterar o que o método vai exibir a partir da sua declaração pelo exibir dados em cada classe.
